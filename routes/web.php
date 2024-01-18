@@ -16,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
-//     Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
-// });
 
-// Route::middleware(['auth'])->group(function () {
-//     Route::get('/dashboard', 'DashboardController@index')->name('user.dashboard');
-// });
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', 'DashboardController@index')->name('user.dashboard');
+});
+
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
+});

@@ -75,7 +75,7 @@ html,body {
 				color: rgba(0,0,0,0.4);
 				opacity: 0;
 				visibility: hidden;
-				-webkit-transition: all .3s ease;
+                -webkit-transition: all .3s ease;
 			}
 		}
 

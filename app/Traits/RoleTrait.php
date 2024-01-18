@@ -1,11 +1,11 @@
 <?php
 
-// namespace App\Traits;
+namespace App\Traits;
 
-// trait HasRoles
-// {
-//     public function isAdmin()
-//     {
-//         return $this->role === 'admin';
-//     }
-// }
+trait HasRoles
+{
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+}
